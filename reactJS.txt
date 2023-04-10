@@ -1,0 +1,500 @@
+April 10, 2023 12:45 PM
+
+
+
+                                        ReactJS Learning Roadmap
+
+--> Introduction
+        --> What
+        --> Why
+    
+--> CLI Tools
+        --> Vite
+
+--> Components
+        --> Functional Components
+        --> Basics
+                --> JSX
+                --> Props vs State
+                --> Conditional Rendering
+                --> Composition
+
+--> Rendering
+        --> List and Keys
+        --> Render Props
+        --> Refs
+        --> Events
+        --> Higher order Components
+
+--> Hooks
+        --> useState
+        --> useEffect
+        --> useCallBack
+        --> useRef
+        --> useMemo
+        --> useReducer
+        --> Writing Custom Hooks
+
+--> Routers
+        --> React Router
+
+--> State Management
+        --> Redux/Toolkit
+
+--> Styling
+        --> Tailwind CSS
+        --> Material UI
+
+--> API Calls
+        --> Axios
+
+--> Testing
+        --> JEST
+        --> Cypress
+
+--> Forms
+        --> React Hook Form
+
+
+
+
+
+
+
+                                               Chapter - 1: Introduction
+
+1. What is React.JS?
+        * React.Js is a popular Open source JavaScript Library used for building user Interfaces
+        * It was Created by Facebook and is widely used by developers around the world.
+        * It follows a component-based architecture, allowing developers to create reusable UI elements.
+        * It uses a virtual DOM (Document Object Model) to update the user Interface efficiently.
+        * It supports server-side rendering, which can improve the performance of web applications.
+        * It works well with the other technologies such as Redux, GraphQL and Node.Js
+        * It is highly customisable, and developers can use a variety of tools and libraries to extend its functionality.
+
+
+    Some Important terminology used in the above points:
+
+        Component Based Architecture: It is a software development approach that emphasizes breaking down complex 
+                                      software systems into a smaller, reusable pieces called components. In this architecture, 
+                                      each component is a self-contained module that has a well-defined interface and can be
+            easily combined with other components to build larger software systems.
+                
+                Features:
+                    * Components are independent and self-contained i.e., they have their own functionality.
+                    * Components have a well-defined interface which makes it easier to integrate components with each other.
+                    * Compnents are reusable.
+                    * Components are modular meaning they can be developed, tested and deployed independently.
+                    * Components are combined to build larger software systems.
+
+        
+        Virtual DOM: It is a programming concept used in ReactJS and other modern web development frameworks. It is an 
+                     abstract representation of the actual DOM (Document Object Model) in a JavaScript Object format that 
+                     React uses to optimize the rendering of the user interface.
+        
+            Working of this feature:
+                * When a user interacts with a React application, React updates the virtual DOM instead of updating the actual DOM directly.
+                * React then compares the updated virtual DOM with the previous version of he virtual DOM to identify the differences.
+                * Based on the differences, React only updates the parts of the actual DOM that need to be changed, rather than updating the
+                    entire DOM.
+
+                        With this feature, React can optimize the rendering process and makes updates to the user Interface more efficiently.
+            This can lead to faster and smoother application performance, especially in large-scale applications where there are many UI
+            components.
+        
+
+        Server-Side Rendering: It is a technique used in web development to render web pages on the server before they are sent to the client's
+                               web browser. In this, when a user requests a web page, the server generates the HTML, CSS, and JavaScript needed
+                               to display the page and sends it to the client as a fully-formed web page.
+                
+                Advantages of this feature:
+                    * Faster initial page load time.
+                    * Better Search Engine Optimization
+                    * Improved accessibility
+
+
+
+2. Why to Use React.JS?
+        The following are the key benefits of using React.JS for web development
+            * Component- Based Architecture : see above notes to understand Better
+            * Virtual DOM : see above notes to understand Better
+            * Server Side rendering: see above notes to understand Better
+            * Large Developer Community: React.JS has a large and active developer community, which provides support and contributes to the 
+                                         ongoing development of the library.
+            * Rich Eco-System: React.JS has a rich ecosystem of tools and libraries that can be used to extend its functionality and build
+                               complex web applications.
+            * Cross Platform development: React Native, a framework built on top of React.JS, allows developers to build native mobile
+                                          applications for IOS and Android using JavaScript and React.JS
+            * Performance: React.JS provides excellent perfomance and is capable of handling complex applications with large amount of data.
+
+
+
+
+
+
+
+                                                        Chapter - 2: CLI Tools
+
+
+1. What is Vite?
+        Vite is a build tool and development server created by Evan You. It is designed to provide fast and optimized development experience
+    for mordern web applications. Vite is based on the idea of "instant server start", which means that developers can get up and running 
+    quickly without having to wait for the build process to finish.
+
+        Features:
+            * Fast Development Server
+            * Lightweight build process
+            * Plugin-based architecture
+            * Support for modern web development Features
+        
+        Creation of React applications
+            * Step - 1: Install Node.JS and npm on the computer if not done already.
+            * Step - 2: Open the terminal and write the following command
+                            npm install -g Vite
+            * Step - 3: change into the directory where you want to create the react application
+            * Step - 4: run the following command --> npm create vite@latest
+            * Step - 5: It will ask for the project name, give the project name and click enter
+            * Step - 6: Now it will ask for the package name, just click on space and then click enter
+            * Step - 7: Then it will ask for project type, then select React and click enter
+            * Step - 8: Then it will ask for language( JavaScript or TypeScript) , then select according to your choice and then click enter.
+            * Step - 9: run the command --> npm install
+            * Step - 10: run the command --> npm run dev to start the server.
+
+
+
+
+
+
+
+                                                Chapter - 3 : Components
+
+1. What are components?
+        See the first chapter on component for more detailed explanation
+
+        Functional Components: Functional Components, also known as stateless components, are a type of component in React.JS that are defined
+                               as JavaScript functions. They are a simpler and more concise way of creating components compared to class
+                               components.
+        
+            Here are some key features of functional components in React.JS:
+                * Function-based Syntax: functional components are defined as plain JavaScript functions. They take in a set of props as an
+                                         argument and return a React element.
+                * No state or lifecycle methods: Functional components are considered to be stateless because they do not have their own state
+                                                 or lifecycle methods like componentDidMount, shouldComponentUpdate etc. This means that 
+                                                 functional components only render based on their input props.
+                * Easy to test: Since functional components are stateless, they are easier to test than class components. They only rely on
+                                their input props, making them easier to mock and test.
+                * Faster performance: Functional components are generally faster than class components because they do not have to create and 
+                                      manage an instance of the component.
+                * Hooks support: React introduced Hooks in Version 16.8, which allows functional components to use state and lifecycle methods
+                                 using the useState and useEffect hooks, respectively.
+                
+            
+            Example:
+
+                const Greeting = (props) => {
+                    return (
+                        <>
+                            <h1> Hello, {props.name} </h1>
+                        </>
+                    )
+                }
+
+                export default Greeting;
+
+
+2. Other Basic Concepts of Components:
+    --> JSX: JSX is an extension to JavaScript Syntax that allows developers to write HTML-Like code within their JavaScript code in React
+             applications. 
+
+             Features: 
+                * HTML-Like Syntax: JSX allows developers to write HTML-Like code within their JavaScript code. This makes it easier to
+                                    create and manage UI components in React.
+                * Transpilation: JSX is not a valid JavaScript, so it needs to be transpiled into regular JavaScript code that browsers can
+                                 understand. This is typically done using tools like Babel, which converts the JSX code into regular JS code
+                                 during the process.
+                * Components as Functions: In JSX, components are represented as functions that return React elements. This makes it easier to
+                                           create and reuse components in React.
+                * Expressions in curly braces ({}): JSX allows developers to embed expressions in curly braces within their HTML-Like code.
+                                                    This makes it easier to manipulate and render dynamic content in React.
+
+    --> Props vs State:
+            Props: Props, short form for "properties" are used to pass data from one component to other component. Props are read-only, meaning
+                   that they cannot be modified by the child component that recieves them. They are passed down from parent components to child
+                   components through a hirearchy of components.
+                
+                Eg:
+
+                    const parentComponent = () => {
+                        const name = 'John'
+                        return (
+                            <ChildComponent name = {name} />
+                        )
+                    }
+
+                    const ChildComponent = (props) => {
+                        return (
+                            <>
+                                <h1> Hello, {props.name} </h1>
+                            </>
+                        )
+                    }
+
+                In the above example, we passed the name variable as a prop to the ChildComponent.
+            
+
+            States: States are used to manage and store data within a component. Unlike props, states can be modified within a component using
+                    the setState() method. When a state is updated, React automatically re-renders the component and any child component that 
+                    rely on the state.
+                
+                Eg: 
+
+                    import {useState} from 'react'
+                    const counter = () => {
+                        const [count, setCount] = useState(0)
+
+                        const handleClick = () => {
+                            setCount(count+1)
+                        }
+
+                        return (
+                            <>
+                                <p> you clicked on the button {count} times </p>
+                                <button onClick = {handleClick}> Click Me </button>
+                            </>
+                        )
+                    }
+
+                In the above example useState hook is used to create a count state and setCount function to update the count state.
+        
+        -------------------------------------------------------------------------------------------------------------------------------
+        |                                                              |                                                              |      
+        |                   Props                                      |                        States                                |
+        |                                                              |                                                              |
+        -------------------------------------------------------------------------------------------------------------------------------
+        |   * Props are read - only                                    |    * State changes can be asynchronous                       |
+        |   * Props are immutable                                      |    * States are mutable                                      |
+        |   * Props allow you to pass data from one component to       |    * States holds information about the components           |
+        |     another                                                  |                                                              |
+        |   * Props can be accessed by the child components            |    * States cannot be accessed by the Child Components       |
+        |   * Props are used to communicate between components         |    * State can be used for rendering dynamic changes with    |
+        |                                                              |      the components                                          |
+        |   * Stateless components have props                          |    * Stateless components cannot have props                  |
+        |   * Props can make components reusable                       |    * States cannot make component reusable                   |
+        |   * Props are external and controlled by whatever Render     |    * The state is internal and controlled by the React       |
+        |     the component                                            |      component itself.                                       |
+        -------------------------------------------------------------------------------------------------------------------------------
+
+
+        --> Conditional Rendering: It is a technique that allows you to control what is displayed in a component based on certain conditions.
+                                    It is useful when you want to display different content based on user input, data, or the current state of
+                                    the application.
+                    
+                    There are mainly three ways to achieve this feature:
+
+                        1. If/Else statements: We can use if/else statements to conditionally render content in the components.
+
+                            Eg:
+                                const MyComponent = (props) => {
+                                    if(props.show) {
+                                        return (
+                                            <>
+                                                <div>
+                                                    This message will show if props.show is true
+                                                </div>
+                                            </>
+                                        )
+                                    }else {
+                                        return (
+                                            <>
+                                                <div>
+                                                    This message will show if props.show is false
+                                                </div>
+                                            </>
+                                        )
+                                    }
+                                }
+                        
+                            here if case will render if the props.show is true otherwise else case will be rendered
+                        
+                        2. Terenary operator: You can also use a terenary operator to conditionally render content:
+                            Eg:
+                                const MyComponent = (props) => {
+                                    return (
+                                        (props.show)? <div> This message will show if props.show is true </div> : <div> This message will
+                                                            show if props.show is false </div>
+                                    )
+                                }
+                        
+                        3. Short-Circuit Evaluation: We can use this approach only if a certain condition is met.
+                            Eg:
+                                const MyComponent = (props) => {
+                                    return (
+                                        <>
+                                            <div>
+                                                {props.items && props.items.length > 0 && (
+                                                    <ul>
+                                                        {props.items.map((item)=> (
+                                                            <li key= {item.id}> {item.name} </li>
+                                                        ))}
+                                                    </ul>
+                                                )}
+                                            </div>
+                                        </>
+                                    )
+                                }
+
+                                In this example we are using short-circuit evaluation to render a list of items only if props.items is not null,
+                                undefined or empty.
+        
+        --> Composition: It is a technique for building complex components by combining simpler components together. It is a way to create
+                         reusable pieces of UI that can be combined in different ways to create differen UI elments.
+
+                    It is an alternative to inheritance in object-oriented programming. Instead of creating a class hierarchy, you create 
+            components that can be composed together to create more complex components.
+
+            Eg:
+                const Button = (props) => {
+                    return (
+                        <button className = "btn" onClick = {props.onClick}>
+                            {props.label}
+                        </button>
+                    )
+                }
+
+                const PrimaryButton = (props) => {
+                    return (
+                        <Button {...props} className="btn-primary" />
+                    )
+                }
+
+                const App = () => {
+                    const handleClick = () => {
+                        alert('Button Clicked!')
+                    }
+
+                    return (
+                        <>
+                            <div>
+                                <Button label="Click me!" onClick={handleClick} />
+                                <PrimaryButton label="Click me too!" onClick={handleClick}/>
+                            </div>
+                        </>
+                    )
+                }
+
+
+                     In this example, we're creating a Button component that accepts a label and an onClick prop. We're then creating a 
+                'PrimaryButton' component that uses the 'Button' component and adds a 'ClassName' prop.
+
+                    Finally we are using these components in our App component, passing in difference props and handling the Onclick event.
+
+
+
+
+
+                                                    Chapter - 4: Rendering
+
+1. Lists and Keys:
+            Lists are used to render a collection of items in a component. To create a list, you can use the map function to iterate over an 
+    array of data and create a new array of components for each item in the array. You can then render the array of components in the 
+    component.
+
+            Keys are a special attribute that you need to incude when rendering a list of components in React. Keys are used to help React
+    efficiently update the UI when changes occur. When a component is added, removed, or moved in a list, React uses the keys to determine
+    which components need to be updated.
+            
+            The key attribute should be a unique identifier for each item in the list. The ideal value for a key is something that doesn't 
+    change over time, such as an ID or a slug. Using an index as the key can cause problems if the order of the list changes, so it's best
+    to avoid using indexes as keys.
+
+            Eg:
+                const MyList = (props) => {
+                    const items = props.items.map((item)=> (
+                        <li key={item.id}> {item.name} </li>
+                    ))
+
+                    return (
+                        <>
+                            <ul> {items} </ul>
+                        </>
+                    )
+                }
+
+
+                const App = () => {
+                    const data = [
+                        {
+                            id:1,
+                            name: 'name 1'
+                        },
+                         {
+                            id:2,
+                            name: 'name 2'
+                        },
+                         {
+                            id:3,
+                            name: 'name 3'
+                        },
+                         {
+                            id:4,
+                            name: 'name 4'
+                        }
+                    ]
+
+                    return (
+                        <>
+                            <MyList items={data}/>
+                        </>
+                    )
+                }
+
+
+                    In this example, we are creating a MyList component that accepts an array of items as a prop. We are then using the map
+        function to iterate over the array and create a new array of li elements, each with a unique key based on the id of the item. Finally,
+        we are using the MyList component in our app component, passing an array of data as a prop.
+
+                    Using keys in React is important because they allow React to keep track of which items have changed in a list efficiently
+        update the UI. When a key is not provided, React uses the index of the item in the array as the key, but this can lead to issues if the
+        order of the items changes or new items are added or removed.
+
+
+
+2. Render props: It is a pattern in React that allows a component to share its internal state or logic with other components by exposing about
+                 function as a prop. This function can be called by the receiving component to render its contents
+
+        Eg:
+            import {useState} from 'react'
+            const Toggle = ({children}) => {
+                const [on, setOn] = useState(false)
+
+                const toggle = () => {
+                    setOn(!on)
+                }
+
+                return children({on, toggle})
+            }
+
+            const App = () => {
+                return (
+                    <>
+                        <Toggle>
+                            {({on, toggle})=> (
+                                <div>
+                                    <button onClick={toggle}>{on?'On':'Off'}</button>
+                                </div>
+                            )}
+                        </Toggle>
+                    </>
+                )
+            }
+
+            In this example, we have a Toggle component that encapsulates the toggle functionality. It maintains its own internal state ('on')
+    and exposes a toggle function via its children prop. We then render the Toggle component in the App component, passign it a render prop that
+    returns a button with a click handler that calls the toggle function. We also use the on value to determine the text of the button.
+
+            By using a render prop, we are able to encapsulate the toggle functionality in the Toggle component, while still allowing other
+    components to use it as needed.
+
+
+
+3. 
